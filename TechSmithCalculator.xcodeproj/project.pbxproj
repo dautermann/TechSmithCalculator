@@ -1,0 +1,331 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2594E51A179110A7004C3028 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2594E519179110A7004C3028 /* Cocoa.framework */; };
+		2594E524179110A7004C3028 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2594E522179110A7004C3028 /* InfoPlist.strings */; };
+		2594E526179110A7004C3028 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2594E525179110A7004C3028 /* main.m */; };
+		2594E52A179110A7004C3028 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2594E528179110A7004C3028 /* Credits.rtf */; };
+		2594E52D179110A7004C3028 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2594E52C179110A7004C3028 /* AppDelegate.m */; };
+		2594E530179110A7004C3028 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2594E52E179110A7004C3028 /* MainMenu.xib */; };
+		2594E5381791118A004C3028 /* CalculatorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2594E5371791118A004C3028 /* CalculatorController.m */; };
+		2594E53D179118D0004C3028 /* CalculatorWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2594E53C179118D0004C3028 /* CalculatorWindow.xib */; };
+		2594E540179127B7004C3028 /* CalculatorTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2594E53F179127B7004C3028 /* CalculatorTextField.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2594E516179110A7004C3028 /* TechSmithCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechSmithCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2594E519179110A7004C3028 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		2594E51C179110A7004C3028 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2594E51D179110A7004C3028 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2594E51E179110A7004C3028 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2594E521179110A7004C3028 /* TechSmithCalculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TechSmithCalculator-Info.plist"; sourceTree = "<group>"; };
+		2594E523179110A7004C3028 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2594E525179110A7004C3028 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2594E527179110A7004C3028 /* TechSmithCalculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TechSmithCalculator-Prefix.pch"; sourceTree = "<group>"; };
+		2594E529179110A7004C3028 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2594E52B179110A7004C3028 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2594E52C179110A7004C3028 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2594E52F179110A7004C3028 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2594E5361791118A004C3028 /* CalculatorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorController.h; sourceTree = "<group>"; };
+		2594E5371791118A004C3028 /* CalculatorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorController.m; sourceTree = "<group>"; };
+		2594E53C179118D0004C3028 /* CalculatorWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorWindow.xib; sourceTree = "<group>"; };
+		2594E53E179127B7004C3028 /* CalculatorTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorTextField.h; sourceTree = "<group>"; };
+		2594E53F179127B7004C3028 /* CalculatorTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorTextField.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2594E513179110A7004C3028 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2594E51A179110A7004C3028 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2594E50D179110A7004C3028 = {
+			isa = PBXGroup;
+			children = (
+				2594E51F179110A7004C3028 /* TechSmithCalculator */,
+				2594E518179110A7004C3028 /* Frameworks */,
+				2594E517179110A7004C3028 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2594E517179110A7004C3028 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2594E516179110A7004C3028 /* TechSmithCalculator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2594E518179110A7004C3028 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2594E519179110A7004C3028 /* Cocoa.framework */,
+				2594E51B179110A7004C3028 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2594E51B179110A7004C3028 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2594E51C179110A7004C3028 /* AppKit.framework */,
+				2594E51D179110A7004C3028 /* CoreData.framework */,
+				2594E51E179110A7004C3028 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		2594E51F179110A7004C3028 /* TechSmithCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				2594E52B179110A7004C3028 /* AppDelegate.h */,
+				2594E52C179110A7004C3028 /* AppDelegate.m */,
+				2594E5361791118A004C3028 /* CalculatorController.h */,
+				2594E5371791118A004C3028 /* CalculatorController.m */,
+				2594E53E179127B7004C3028 /* CalculatorTextField.h */,
+				2594E53F179127B7004C3028 /* CalculatorTextField.m */,
+				2594E52E179110A7004C3028 /* MainMenu.xib */,
+				2594E53C179118D0004C3028 /* CalculatorWindow.xib */,
+				2594E520179110A7004C3028 /* Supporting Files */,
+			);
+			path = TechSmithCalculator;
+			sourceTree = "<group>";
+		};
+		2594E520179110A7004C3028 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2594E521179110A7004C3028 /* TechSmithCalculator-Info.plist */,
+				2594E522179110A7004C3028 /* InfoPlist.strings */,
+				2594E525179110A7004C3028 /* main.m */,
+				2594E527179110A7004C3028 /* TechSmithCalculator-Prefix.pch */,
+				2594E528179110A7004C3028 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2594E515179110A7004C3028 /* TechSmithCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2594E533179110A7004C3028 /* Build configuration list for PBXNativeTarget "TechSmithCalculator" */;
+			buildPhases = (
+				2594E512179110A7004C3028 /* Sources */,
+				2594E513179110A7004C3028 /* Frameworks */,
+				2594E514179110A7004C3028 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TechSmithCalculator;
+			productName = TechSmithCalculator;
+			productReference = 2594E516179110A7004C3028 /* TechSmithCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2594E50E179110A7004C3028 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Michael Dautermann";
+			};
+			buildConfigurationList = 2594E511179110A7004C3028 /* Build configuration list for PBXProject "TechSmithCalculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2594E50D179110A7004C3028;
+			productRefGroup = 2594E517179110A7004C3028 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2594E515179110A7004C3028 /* TechSmithCalculator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2594E514179110A7004C3028 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2594E524179110A7004C3028 /* InfoPlist.strings in Resources */,
+				2594E52A179110A7004C3028 /* Credits.rtf in Resources */,
+				2594E530179110A7004C3028 /* MainMenu.xib in Resources */,
+				2594E53D179118D0004C3028 /* CalculatorWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2594E512179110A7004C3028 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2594E526179110A7004C3028 /* main.m in Sources */,
+				2594E52D179110A7004C3028 /* AppDelegate.m in Sources */,
+				2594E5381791118A004C3028 /* CalculatorController.m in Sources */,
+				2594E540179127B7004C3028 /* CalculatorTextField.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2594E522179110A7004C3028 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2594E523179110A7004C3028 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2594E528179110A7004C3028 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2594E529179110A7004C3028 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		2594E52E179110A7004C3028 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2594E52F179110A7004C3028 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2594E531179110A7004C3028 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2594E532179110A7004C3028 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2594E534179110A7004C3028 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TechSmithCalculator/TechSmithCalculator-Prefix.pch";
+				INFOPLIST_FILE = "TechSmithCalculator/TechSmithCalculator-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2594E535179110A7004C3028 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TechSmithCalculator/TechSmithCalculator-Prefix.pch";
+				INFOPLIST_FILE = "TechSmithCalculator/TechSmithCalculator-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2594E511179110A7004C3028 /* Build configuration list for PBXProject "TechSmithCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2594E531179110A7004C3028 /* Debug */,
+				2594E532179110A7004C3028 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2594E533179110A7004C3028 /* Build configuration list for PBXNativeTarget "TechSmithCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2594E534179110A7004C3028 /* Debug */,
+				2594E535179110A7004C3028 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2594E50E179110A7004C3028 /* Project object */;
+}
