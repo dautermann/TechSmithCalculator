@@ -21,6 +21,10 @@
     // chooses another operation to actually do the action
     unichar lastOperation;
     
+    // I may want to merge this with the above "lastOperation", but just in case there's
+    // an operation I don't want to announce... I'll leave it separate for now
+    IBOutlet NSTextField * lastOperationString;
+    
     CGFloat savedValue;
 }
 
@@ -28,6 +32,7 @@
 
 // I do this as a property to retain a copy of the previous string
 @property (strong) NSString * previousTextFieldString;
+@property (strong) NSString * reallyPreviousTextFieldString;
 
 @end
 
@@ -46,10 +51,9 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
+    NSCharacterSet * decimalCharacterSetPlusDecimal = [NSCharacterSet characterSetWithCharactersInString:@"1234567890."];
     
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-    
-    invertedDecimalCharacterSet = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+    invertedDecimalCharacterSet = [decimalCharacterSetPlusDecimal invertedSet];
     arithmeticOperationCharacterSet = [NSCharacterSet characterSetWithCharactersInString:@"+-Xx÷=±Cc"];
 }
 
@@ -113,6 +117,26 @@
         textField.stringValue = self.previousTextFieldString;
         return;
     }
+    
+    if((self.newValueBeingTyped == NO ) && (self.reallyPreviousTextFieldString != nil))
+    {
+        NSMutableString * stringToPrune = [stringFromControl mutableCopy];
+        
+        [stringToPrune replaceOccurrencesOfString: self.reallyPreviousTextFieldString withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [stringToPrune length])];
+        
+        textField.stringValue = stringToPrune;
+        self.previousTextFieldString = stringToPrune;
+        self.newValueBeingTyped = YES;
+    }
+
+    // look for multiple decimal / period characters (and disallow if there is more than one)
+    NSArray * componentsSplitByDecimals = [stringFromControl componentsSeparatedByString: @"."];
+    if([componentsSplitByDecimals count] > 2)
+    {
+        textField.stringValue = self.previousTextFieldString;
+        NSBeep();
+        return;
+    }
 
     rangeOfBogusCharacter = [textField.stringValue rangeOfCharacterFromSet: invertedDecimalCharacterSet];
     if(rangeOfBogusCharacter.location != NSNotFound)
@@ -132,6 +156,7 @@
 - (void) clearCurrentOperation
 {
     lastOperation = 0;
+    lastOperationString.stringValue = @"";
     textField.stringValue = @"";
 }
 
@@ -142,7 +167,7 @@
     
     currentlyVisibleValue = (currentlyVisibleValue * -1 );
     
-    textField.stringValue = [NSString stringWithFormat: @"%f", currentlyVisibleValue];
+    textField.stringValue = [NSString stringWithFormat: @"%g", currentlyVisibleValue];
 }
 
 - (void) doSomethingArithmetically
@@ -180,7 +205,7 @@
     }
     
     savedValue = resultingValue;
-    textField.stringValue = [NSString stringWithFormat: @"%f", resultingValue];
+    textField.stringValue = [NSString stringWithFormat: @"%g", resultingValue];
 }
 
 - (void) operationButtonTouched: (unichar) currentOperation
@@ -201,9 +226,17 @@
         case '-' :
         case 'x' :
         case 'X' :
+            [self doSomethingArithmetically];
+            lastOperation = currentOperation;
+            lastOperationString.stringValue = [NSString stringWithFormat: @"%c", currentOperation];
+            self.reallyPreviousTextFieldString = textField.stringValue;
+            self.newValueBeingTyped = NO;
+            break;
         case '=' :
             [self doSomethingArithmetically];
             lastOperation = currentOperation;
+            lastOperationString.stringValue = @""; // clear out last operation since we just did an "="
+            self.reallyPreviousTextFieldString = textField.stringValue;
             self.newValueBeingTyped = NO;
             break;
         default :
